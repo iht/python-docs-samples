@@ -15,16 +15,15 @@
 # [START gae_python37_app]
 from flask import Flask
 
-
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
-app = Flask(__name__)
+app = Flask("service2")
 
 
-@app.route('/')
+@app.route('/service2/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World! (FROM TOP LEVEL)'
+    return 'Hello World! (FROM APP 2)'
 
 
 if __name__ == '__main__':

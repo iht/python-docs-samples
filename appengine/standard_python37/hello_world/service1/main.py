@@ -11,20 +11,17 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# [START gae_python37_app]
 from flask import Flask
-
 
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
-app = Flask(__name__)
+app = Flask("service1")
 
 
-@app.route('/')
+@app.route('/service1/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World! (FROM TOP LEVEL)'
+    return 'Hello World! (FROM APP 1)'
 
 
 if __name__ == '__main__':
