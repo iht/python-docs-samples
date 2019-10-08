@@ -20,7 +20,7 @@ from flask import Flask
 app = Flask("service2")
 
 
-@app.route('/service2/')
+@app.route('/service2')
 def hello():
     """Return a friendly HTTP greeting."""
     return 'Hello World! (FROM APP 2)'

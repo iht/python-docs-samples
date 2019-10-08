@@ -1,8 +1,8 @@
 dispatch:
 # Default module serves the typical web resources and all static resources.
-- url: "*/service1/*"
+- url: "*/service1*"
   service: service1
 
 # Send all mobile traffic to the mobile frontend.
-- url: "*/service2/*"
+- url: "*/service2*"
   service: service2
